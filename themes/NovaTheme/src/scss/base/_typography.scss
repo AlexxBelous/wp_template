@@ -1,0 +1,51 @@
+@use "@/scss/abstracts/variables" as *;
+@use "@/scss/abstracts/functions" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+
+// h1: (100px)
+h1 {
+	font-size: rem(100);
+	//   @include breakpoint(xlarge) {
+	//     font-size: rem(100);
+	//   }
+}
+
+// h2: (70px)
+h2 {
+	font-size: rem(70);
+	//   @include breakpoint(xlarge) {
+	//     font-size: rem(70);
+	//   }
+}
+
+// h3: (60px)
+h3 {
+	font-size: rem(60);
+	//   @include breakpoint(xlarge) {
+	//     font-size: rem(60);
+	//   }
+}
+
+// h4: (50px)
+h4 {
+	font-size: rem(50);
+	//   @include breakpoint(xlarge) {
+	//     font-size: rem(50);
+	//   }
+}
+
+// h5: (40px)
+h5 {
+	font-size: rem(40);
+	//   @include breakpoint(xlarge) {
+	//     font-size: rem(40);
+	//   }
+}
+
+// h6: (35px / 36px)
+h6 {
+	font-size: rem(36);
+	//   @include breakpoint(xlarge) {
+	//     font-size: rem(36);
+	//   }
+}

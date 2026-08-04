@@ -1,0 +1,69 @@
+{
+  "src/fonts/luckiest-guy/LuckiestGuy-Regular.woff2": {
+    "file": "LuckiestGuy-Regular-TwOhrHJq.woff2",
+    "src": "src/fonts/luckiest-guy/LuckiestGuy-Regular.woff2"
+  },
+  "src/fonts/poppins/Poppins-Bold.woff2": {
+    "file": "Poppins-Bold-QrnsGRUo.woff2",
+    "src": "src/fonts/poppins/Poppins-Bold.woff2"
+  },
+  "src/fonts/poppins/Poppins-ExtraBold.woff2": {
+    "file": "Poppins-ExtraBold-DXkeRuhE.woff2",
+    "src": "src/fonts/poppins/Poppins-ExtraBold.woff2"
+  },
+  "src/fonts/poppins/Poppins-Medium.woff2": {
+    "file": "Poppins-Medium-B4zSnhqC.woff2",
+    "src": "src/fonts/poppins/Poppins-Medium.woff2"
+  },
+  "src/fonts/poppins/Poppins-Regular.woff2": {
+    "file": "Poppins-Regular-BR5NqOYi.woff2",
+    "src": "src/fonts/poppins/Poppins-Regular.woff2"
+  },
+  "src/fonts/poppins/Poppins-SemiBold.woff2": {
+    "file": "Poppins-SemiBold-DJ3afeNI.woff2",
+    "src": "src/fonts/poppins/Poppins-SemiBold.woff2"
+  },
+  "src/js/main.jsx": {
+    "file": "main-SpNM5YoA.js",
+    "name": "main",
+    "src": "src/js/main.jsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/js/modules/MobileMenu.js",
+      "src/js/modules/HeroSlider.js",
+      "src/js/modules/GeographicMap.js"
+    ],
+    "css": [
+      "main-BQOz64Fb.css"
+    ],
+    "assets": [
+      "Poppins-Regular-BR5NqOYi.woff2",
+      "Poppins-Medium-B4zSnhqC.woff2",
+      "Poppins-SemiBold-DJ3afeNI.woff2",
+      "Poppins-Bold-QrnsGRUo.woff2",
+      "Poppins-ExtraBold-DXkeRuhE.woff2",
+      "LuckiestGuy-Regular-TwOhrHJq.woff2"
+    ]
+  },
+  "src/js/modules/GeographicMap.js": {
+    "file": "GeographicMap-BPjU8u3I.js",
+    "name": "GeographicMap",
+    "src": "src/js/modules/GeographicMap.js",
+    "isDynamicEntry": true
+  },
+  "src/js/modules/HeroSlider.js": {
+    "file": "HeroSlider-RRAZTdvX.js",
+    "name": "HeroSlider",
+    "src": "src/js/modules/HeroSlider.js",
+    "isDynamicEntry": true,
+    "css": [
+      "HeroSlider-DxHKOkZ5.css"
+    ]
+  },
+  "src/js/modules/MobileMenu.js": {
+    "file": "MobileMenu-BOsPR3Z3.js",
+    "name": "MobileMenu",
+    "src": "src/js/modules/MobileMenu.js",
+    "isDynamicEntry": true
+  }
+}

@@ -1,0 +1,8 @@
+@use "@/scss/abstracts/functions" as *;
+@use "@/scss/abstracts/variables" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+
+.footer {
+	padding-top: rem(14);
+	padding-bottom: rem(30);
+}

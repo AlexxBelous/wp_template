@@ -1,0 +1,92 @@
+// src/scss/abstracts/_breakpoints.scss
+@use "sass:list";
+@use "sass:map";
+
+$breakpoints: (
+	"small": 480px,
+	"medium": 768px,
+	"large": 1024px,
+	"xlarge": 1278px,
+	"xxlarge": 1512px,
+) !default;
+
+@mixin breakpoint($args...) {
+	// 1. Parse arguments list
+	$query: $args;
+	@if list.length($args) == 1 {
+		$query: list.nth($args, 1);
+	}
+
+	// 2. Determine size and direction
+	$size: list.nth($query, 1);
+	$direction: "up"; // default value
+
+	@if list.length($query) > 1 {
+		$direction: list.nth($query, 2);
+	}
+
+	// 3. Determine width (from map or direct value)
+	$width: $size;
+	@if map.has-key($breakpoints, $size) {
+		$width: map.get($breakpoints, $size);
+	}
+
+	// 4. Media Query Logic
+	@if $direction == "only" {
+		$keys: map.keys($breakpoints);
+		$index: list.index($keys, $size);
+
+		@if $index and $index < list.length($keys) {
+			$next-size: list.nth($keys, $index + 1);
+			$next-width: map.get($breakpoints, $next-size);
+
+			@media (min-width: $width) and (max-width: ($next-width - 0.02px)) {
+				@content;
+			}
+		} @else {
+			@media (min-width: $width) {
+				@content;
+			}
+		}
+	} @else if $direction == "down" {
+		@media (max-width: ($width - 0.02px)) {
+			@content;
+		}
+	} @else {
+		// Default to "up" direction
+		@media (min-width: $width) {
+			@content;
+		}
+	}
+}
+
+//Usage Examples
+
+//  ----->>>>>>> Enhancing for tablets and desktop (from 1024px and up)
+//  @include breakpoint(medium) {
+//}
+
+// ----->>>>>>> Switch to mobile menu (from 1023.98px and down)
+//  @include breakpoint(medium down) {
+//  }
+//}
+
+// ----->>>>>>> Apply styles strictly for tablet range (e.g., between 1024px and 1199px)
+//  @include breakpoint(medium only) {
+//  }
+
+// ----->>>>>>> Custom tweak for odd screen sizes
+//  @include breakpoint(850px down) {
+//}
+
+// ----->>>>>>> Visible only between 'small' (640px) and 'xlarge' (1440px)
+//  @include breakpoint(small) {
+//    @include breakpoint(xlarge down) {
+//    }
+//  }
+//}
+
+// ----->>>>>>> Default Mobile First approach (from 480px and up)
+//@include breakpoint(small) {
+// Styles here apply to everything from 480px wide and medium, larger, xlarge, xxlarge...
+//}

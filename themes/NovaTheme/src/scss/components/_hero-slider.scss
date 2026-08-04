@@ -1,0 +1,32 @@
+@use "@/scss/abstracts/functions" as *;
+@use "@/scss/abstracts/variables" as *;
+
+.hero-wrapper {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+.swiper-slide {
+	height: auto;
+}
+
+.hero-item {
+	&__image {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: contain;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 1;
+	}
+}

@@ -1,0 +1,7 @@
+@use "@/scss/abstracts/functions" as *;
+@use "@/scss/abstracts/variables" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+
+.header {
+	padding: rem(10);
+}

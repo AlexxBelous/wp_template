@@ -1,0 +1,53 @@
+// src/scss/main.scss
+@use "@/scss/abstracts/functions" as *;
+@use "@/scss/abstracts/variables" as *;
+@use "@/scss/abstracts/breakpoints" as *;
+
+@use "@/scss/abstracts/reset";
+@use "@/scss/base/typography";
+@use "@/scss/base/fonts";
+
+@use "@/scss/components/hero-slider";
+@use "@/scss/components/header";
+@use "@/scss/components/footer";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: $font-main;
+	font-weight: 400;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	margin-top: auto;
+	flex-shrink: 0;
+}
+
+.container {
+	max-width: $container-max-width;
+	margin: 0 auto;
+	padding: 0 $container-padding;
+	width: 100%;
+}
+
+.full {
+	width: 100%;
+}
