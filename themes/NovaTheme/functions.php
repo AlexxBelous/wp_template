@@ -351,6 +351,27 @@ add_filter( 'acf/settings/load_json', 'novatheme_acf_json_load_point' );
 
 
 
+
+/*
+|--------------------------------------------------------------------------
+| DISABLE GUTENBERG / ENABLE CLASSIC EDITOR
+|--------------------------------------------------------------------------
+| Disables the Gutenberg block editor and restores the Classic Editor for posts,
+| pages, and custom post types (CPT).
+| Uncomment the code below if you prefer using the Classic Editor.
+*/
+
+// 1. Disable Gutenberg for posts and pages
+// add_filter( 'use_block_editor_for_post', '__return_false', 10 );
+
+// 2. Disable Gutenberg for Custom Post Types
+// add_filter( 'use_block_editor_for_post_type', '__return_false', 10 );
+/*----------------------- END OF CLASSIC EDITOR -------------------------*/
+
+
+
+
+
 function dump( $data ) {
 	echo '<pre style="background-color: black; color: greenyellow; padding: 20px">';
 	print_r( $data );
