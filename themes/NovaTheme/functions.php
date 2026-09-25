@@ -371,6 +371,24 @@ add_filter( 'acf/settings/load_json', 'novatheme_acf_json_load_point' );
 
 
 
+/*
+|--------------------------------------------------------------------------
+| WOOCOMMERCE SUPPORT
+|--------------------------------------------------------------------------
+| Declares theme support for WooCommerce functionality and templates.
+| Required for proper WooCommerce integration and layout rendering.
+*/
+
+// Declare WooCommerce theme support
+function novatheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'novatheme_add_woocommerce_support' );
+/*------------------------ END OF WOOCOMMERCE --------------------------*/
+
+
+
+
 
 function dump( $data ) {
 	echo '<pre style="background-color: black; color: greenyellow; padding: 20px">';
